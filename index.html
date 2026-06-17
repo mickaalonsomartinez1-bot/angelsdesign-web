@@ -31,14 +31,14 @@ nav.scrolled{box-shadow:0 4px 24px rgba(27,79,204,.12);}
 .hamburger span{display:block;width:24px;height:2px;background:#0A0A0A;border-radius:2px;transition:.3s;}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:#fff;padding:90px 5% 60px;}
+.hero{min-height:80vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:#fff;padding:80px 5% 40px;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 70% 40%,rgba(27,79,204,.07) 0%,transparent 70%);pointer-events:none;}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(27,79,204,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(27,79,204,.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
 .hero-content{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px;max-width:1200px;width:100%;position:relative;z-index:1;}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--blue-pale);color:var(--blue);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:100px;border:1px solid rgba(27,79,204,.2);margin-bottom:22px;}
 .hero-badge::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%;animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.4);}}
-.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.2rem,7vw,5.5rem);line-height:.95;letter-spacing:1px;margin-bottom:8px;}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,5.5vw,4.2rem);line-height:.95;letter-spacing:1px;margin-bottom:8px;}
 .hero-title .acc{color:var(--blue);}
 .hero-sub{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.3rem,2.5vw,1.9rem);color:#6B7280;letter-spacing:2px;margin-bottom:22px;}
 .hero-desc{font-size:1rem;color:#6B7280;line-height:1.7;margin-bottom:32px;max-width:480px;}
@@ -52,12 +52,12 @@ nav.scrolled{box-shadow:0 4px 24px rgba(27,79,204,.12);}
 .hero-stat-num{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;color:var(--blue);line-height:1;}
 .hero-stat-label{font-size:.72rem;color:#6B7280;font-weight:500;margin-top:2px;}
 .hero-visual{display:flex;align-items:center;justify-content:center;}
-.hero-logo-wrap{position:relative;width:320px;height:320px;display:flex;align-items:center;justify-content:center;}
+.hero-logo-wrap{position:relative;width:260px;height:260px;display:flex;align-items:center;justify-content:center;}
 .ring1{position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(27,79,204,.15);animation:spin 20s linear infinite;}
 .ring1::before{content:'';position:absolute;top:-4px;left:50%;width:8px;height:8px;background:var(--blue);border-radius:50%;transform:translateX(-50%);}
 .ring2{position:absolute;inset:24px;border-radius:50%;border:1px dashed rgba(27,79,204,.1);animation:spin 30s linear infinite reverse;}
 @keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
-.logo-inner{width:220px;height:220px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 60px rgba(27,79,204,.15),0 4px 16px rgba(0,0,0,.08);position:relative;z-index:1;overflow:hidden;}
+.logo-inner{width:175px;height:175px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 60px rgba(27,79,204,.15),0 4px 16px rgba(0,0,0,.08);position:relative;z-index:1;overflow:hidden;}
 .logo-inner img{width:100%;height:100%;object-fit:contain;}
 
 /* BANNER */
@@ -94,25 +94,25 @@ section{padding:72px 5%;}
 .gal-card:hover 
 
 /* PROMO */
-.promo{background:linear-gradient(135deg,#0A0A0A 0%,#0f2356 100%);padding:72px 5%;}
+.promo{background:linear-gradient(135deg,#1B4FCC 0%,#0f2356 100%);padding:72px 5%;}
 .promo-inner{max-width:1100px;margin:0 auto;}
-.promo-badge{display:inline-flex;align-items:center;gap:8px;background:#EF4444;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:2px;padding:8px 20px;border-radius:100px;margin-bottom:28px;animation:pulse-badge 2s infinite;}
+.promo-badge{display:inline-flex;align-items:center;gap:8px;background:#EF4444;border:2px solid rgba(255,255,255,.3);color:#fff;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:2px;padding:8px 20px;border-radius:100px;margin-bottom:28px;animation:pulse-badge 2s infinite;}
 @keyframes pulse-badge{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,.4);}50%{box-shadow:0 0 0 12px rgba(239,68,68,0);}}
 .promo-layout{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
 .promo-img-wrap{background:#fff;border-radius:24px;padding:28px;box-shadow:0 20px 60px rgba(27,79,204,.25);text-align:center;}
 .promo-img-wrap img{width:100%;max-width:280px;object-fit:contain;display:block;margin:0 auto;}
 .promo-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.2rem);color:#fff;letter-spacing:1px;line-height:1.05;margin-bottom:12px;}
 .promo-title span{color:#60A5FA;}
-.promo-desc{color:#9CA3AF;font-size:.93rem;line-height:1.7;margin-bottom:24px;}
+.promo-desc{color:rgba(255,255,255,.8);font-size:.93rem;line-height:1.7;margin-bottom:24px;}
 .promo-feats{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px;}
 .promo-feat{display:flex;align-items:center;gap:10px;font-size:.87rem;color:#D1D5DB;}
 .promo-feat-dot{width:20px;height:20px;background:var(--blue);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.7rem;color:#fff;font-weight:700;}
 .precio-box{display:flex;align-items:flex-end;gap:20px;margin-bottom:28px;flex-wrap:wrap;}
-.precio-label{font-size:.72rem;color:#6B7280;text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:4px;}
+.precio-label{font-size:.72rem;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:4px;}
 .precio-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,5vw,4rem);color:#fff;letter-spacing:1px;line-height:1;}
-.precio-sub{font-size:.78rem;color:#6B7280;margin-top:2px;}
-.precio-divider{width:1px;height:60px;background:#374151;align-self:center;}
-.precio-info{font-size:.84rem;color:#D1D5DB;}
+.precio-sub{font-size:.78rem;color:rgba(255,255,255,.6);margin-top:2px;}
+.precio-divider{width:1px;height:60px;background:rgba(255,255,255,.3);align-self:center;}
+.precio-info{font-size:.84rem;color:rgba(255,255,255,.8);}
 .btn-wsp{display:inline-flex;align-items:center;gap:12px;background:#25D366;color:#fff;text-decoration:none;font-weight:700;font-size:1rem;padding:14px 28px;border-radius:10px;box-shadow:0 4px 16px rgba(37,211,102,.35);transition:background .2s,transform .2s;}
 .btn-wsp:hover{background:#20BA5A;transform:translateY(-2px);}
 .mayorista-strip{background:#1B4FCC;border-radius:14px;padding:20px 24px;margin-top:24px;display:flex;align-items:center;gap:14px;}
@@ -268,7 +268,7 @@ footer p{font-size:.8rem;}
 </section>
 
 <!-- PROMO -->
-<section class="promo" id="promo">
+<section class="promo" id="promo" style="background:linear-gradient(135deg,#1B4FCC 0%,#0f2356 100%)!important;">
   <div class="promo-inner">
     <div class="promo-badge">🔥 PROMOCIÓN ESPECIAL · PRECIO POR MAYOR</div>
     <div class="promo-layout">
@@ -280,15 +280,15 @@ footer p{font-size:.8rem;}
         <p class="promo-desc">Impresión 3D de alta calidad con el diseño que vos elijas. Ideal para regalar, coleccionar o llevar los colores de tu equipo. 100% personalizable con nombre, frase o logo.</p>
         <ul class="promo-feats">
           <li class="promo-feat"><span class="promo-feat-dot">✓</span> Diseño 100% a elección del cliente</li>
-          <li class="promo-feat"><span class="promo-feat-dot">✓</span> Precio especial por mayor desde 10 unidades</li>
+          <li class="promo-feat"><span class="promo-feat-dot">✓</span> Precio mayorista especial desde 10 unidades — ¡consultanos!</li>
           <li class="promo-feat"><span class="promo-feat-dot">✓</span> Cualquier club, equipo o diseño propio</li>
           <li class="promo-feat"><span class="promo-feat-dot">✓</span> Envíos coordinados a todo el país</li>
         </ul>
         <div class="precio-box">
           <div>
-            <div class="precio-label">Precio por mayor</div>
+            <div class="precio-label">Precio minorista</div>
             <div class="precio-num">$21.999</div>
-            <div class="precio-sub">por unidad · precio mayorista</div>
+            <div class="precio-sub">por unidad · <span style="color:#60A5FA;font-weight:700;">por mayor, mejor precio 👇</span></div>
           </div>
           <div class="precio-divider"></div>
           <div class="precio-info">
@@ -300,11 +300,11 @@ footer p{font-size:.8rem;}
           <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.558 4.137 1.532 5.875L.057 23.994l6.303-1.654A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.665-.522-5.183-1.43l-.371-.22-3.853 1.011 1.029-3.75-.242-.386A9.944 9.944 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
           ¡Lo quiero! Consultar ahora
         </a>
-        <div class="mayorista-strip">
+        <div class="mayorista-strip" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);">
           <div class="icon">🏭</div>
           <div>
-            <h4>PRECIOS POR MAYOR</h4>
-            <p>Trabajamos con empresas, revendedores y eventos. Consultanos por volumen y obtené los mejores precios del mercado.</p>
+            <h4>🏷️ MEJOR PRECIO POR MAYOR</h4>
+            <p>Pedidos desde 10 unidades obtienen precios especiales. ¡Consultanos y te damos el mejor precio del mercado!</p>
           </div>
         </div>
       </div>
