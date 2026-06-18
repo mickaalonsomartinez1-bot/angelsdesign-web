@@ -171,7 +171,7 @@ footer p{font-size:.8rem;}
   .promo-layout{grid-template-columns:1fr;}
   .emp-layout{grid-template-columns:1fr;}
   .contacto-layout{grid-template-columns:1fr;}
-  .serv-grid{grid-template-columns:repeat(2,1fr);}
+  .serv-grid{grid-template-columns:repeat(2,1fr);} #presupuesto > div{grid-template-columns:1fr!important;}
 }
 @media(max-width:500px){
   .gal-grid{grid-template-columns:repeat(2,1fr);}
@@ -188,6 +188,7 @@ footer p{font-size:.8rem;}
   <ul class="nav-links">
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#trabajos">Trabajos</a></li>
+    <li><a href="#presupuesto">Presupuesto</a></li>
     <li><a href="#promo">Promociones</a></li>
     <li><a href="#empresarial">Empresarial</a></li>
     <li><a href="#contacto">Contacto</a></li>
@@ -313,6 +314,101 @@ footer p{font-size:.8rem;}
 </section>
 
 <!-- GALERÍA -->
+
+<!-- PRESUPUESTO -->
+<section id="presupuesto" style="background:#F8FAFC;padding:72px 5%;">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;">
+    
+    <!-- FORM -->
+    <div>
+      <p class="section-label">¿Qué necesitás?</p>
+      <h2 class="section-title">PEDÍ TU PRESUPUESTO</h2>
+      <p class="section-desc">Completá el formulario y te contactamos por WhatsApp con el mejor precio para tu proyecto.</p>
+
+      <div style="background:#fff;border:1.5px solid #E5E7EB;border-radius:20px;padding:32px;margin-top:28px;box-shadow:0 4px 24px rgba(27,79,204,.07);">
+        <div style="margin-bottom:18px;">
+          <label style="display:block;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#6B7280;margin-bottom:7px;">Tu nombre</label>
+          <input type="text" id="pNombre" placeholder="Nombre completo" style="width:100%;background:#F8FAFC;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:.9rem;font-family:'Inter',sans-serif;outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='#1B4FCC'" onblur="this.style.borderColor='#E5E7EB'">
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
+          <div>
+            <label style="display:block;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#6B7280;margin-bottom:7px;">Servicio</label>
+            <select id="pServicio" style="width:100%;background:#F8FAFC;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:.9rem;font-family:'Inter',sans-serif;outline:none;appearance:none;cursor:pointer;transition:border-color .2s;" onfocus="this.style.borderColor='#1B4FCC'" onblur="this.style.borderColor='#E5E7EB'">
+              <option value="">Seleccionar...</option>
+              <option>Sublimado</option>
+              <option>Estampado</option>
+              <option>Impresión 3D</option>
+              <option>Grabado Láser</option>
+              <option>Papelería</option>
+              <option>Regalos Empresariales</option>
+              <option>Vaso Chopp Personalizado</option>
+              <option>Otro / Combinado</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#6B7280;margin-bottom:7px;">Cantidad</label>
+            <select id="pCantidad" style="width:100%;background:#F8FAFC;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:.9rem;font-family:'Inter',sans-serif;outline:none;appearance:none;cursor:pointer;transition:border-color .2s;" onfocus="this.style.borderColor='#1B4FCC'" onblur="this.style.borderColor='#E5E7EB'">
+              <option value="">Seleccionar...</option>
+              <option>1 unidad</option>
+              <option>2 a 5 unidades</option>
+              <option>6 a 20 unidades</option>
+              <option>21 a 50 unidades</option>
+              <option>Más de 50 unidades</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-bottom:18px;">
+          <label style="display:block;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#6B7280;margin-bottom:7px;">¿Qué tenés en mente?</label>
+          <textarea id="pDetalle" placeholder="Describí tu idea, producto deseado, colores, tamaño, uso..." style="width:100%;background:#F8FAFC;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:.9rem;font-family:'Inter',sans-serif;outline:none;min-height:95px;resize:vertical;transition:border-color .2s;" onfocus="this.style.borderColor='#1B4FCC'" onblur="this.style.borderColor='#E5E7EB'"></textarea>
+        </div>
+        <div style="margin-bottom:20px;">
+          <label style="display:block;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#6B7280;margin-bottom:7px;">¿Necesitás envío?</label>
+          <select id="pEnvio" style="width:100%;background:#F8FAFC;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:.9rem;font-family:'Inter',sans-serif;outline:none;appearance:none;cursor:pointer;">
+            <option>Sí, envío a domicilio</option>
+            <option>No, retiro en Córdoba Capital</option>
+          </select>
+        </div>
+        <button onclick="enviarPresupuesto()" style="display:flex;align-items:center;justify-content:center;gap:12px;width:100%;background:#25D366;color:#fff;border:none;border-radius:10px;padding:14px;font-size:1rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:background .2s,transform .2s;box-shadow:0 4px 16px rgba(37,211,102,.3);" onmouseover="this.style.background='#20BA5A';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#25D366';this.style.transform='translateY(0)'">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.558 4.137 1.532 5.875L.057 23.994l6.303-1.654A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.665-.522-5.183-1.43l-.371-.22-3.853 1.011 1.029-3.75-.242-.386A9.944 9.944 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+          Enviar por WhatsApp
+        </button>
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div>
+      <div style="background:#fff;border:1.5px solid #E5E7EB;border-radius:20px;padding:32px;box-shadow:0 4px 24px rgba(27,79,204,.07);">
+        <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:1px;margin-bottom:24px;color:#0A0A0A;">¿CÓMO FUNCIONA?</h3>
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:36px;height:36px;background:#1B4FCC;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1rem;color:#fff;flex-shrink:0;">1</div>
+            <div><div style="font-weight:600;font-size:.9rem;margin-bottom:3px;">Contanos tu idea</div><div style="font-size:.82rem;color:#6B7280;line-height:1.5;">Completá el formulario con los detalles de lo que necesitás.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:36px;height:36px;background:#1B4FCC;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1rem;color:#fff;flex-shrink:0;">2</div>
+            <div><div style="font-weight:600;font-size:.9rem;margin-bottom:3px;">Recibís tu presupuesto</div><div style="font-size:.82rem;color:#6B7280;line-height:1.5;">Te contactamos por WhatsApp con precios y opciones disponibles.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:36px;height:36px;background:#1B4FCC;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1rem;color:#fff;flex-shrink:0;">3</div>
+            <div><div style="font-weight:600;font-size:.9rem;margin-bottom:3px;">Aprobás el diseño</div><div style="font-size:.82rem;color:#6B7280;line-height:1.5;">Te enviamos una previsualización antes de producir.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:36px;height:36px;background:#1B4FCC;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1rem;color:#fff;flex-shrink:0;">4</div>
+            <div><div style="font-weight:600;font-size:.9rem;margin-bottom:3px;">Lo recibís en casa</div><div style="font-size:.82rem;color:#6B7280;line-height:1.5;">Producimos y enviamos a todo el país, o retirás en Córdoba Capital.</div></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px;">
+          <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:10px;padding:12px;display:flex;align-items:center;gap:8px;font-size:.8rem;font-weight:500;">✅ Calidad Premium</div>
+          <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:10px;padding:12px;display:flex;align-items:center;gap:8px;font-size:.8rem;font-weight:500;">💎 Diseños Exclusivos</div>
+          <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:10px;padding:12px;display:flex;align-items:center;gap:8px;font-size:.8rem;font-weight:500;">❤️ Atención Personalizada</div>
+          <div style="background:#F8FAFC;border:1px solid #E5E7EB;border-radius:10px;padding:12px;display:flex;align-items:center;gap:8px;font-size:.8rem;font-weight:500;">📦 Envíos a todo el país</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <section id="trabajos" style="background:#fff;">
   <div class="section-header">
     <p class="section-label">Nuestro trabajo</p>
@@ -436,6 +532,17 @@ footer p{font-size:.8rem;}
 </a>
 
 <script>
+
+function enviarPresupuesto() {
+  const nombre = document.getElementById('pNombre').value.trim() || 'Sin nombre';
+  const servicio = document.getElementById('pServicio').value || 'Sin especificar';
+  const cantidad = document.getElementById('pCantidad').value || 'Sin especificar';
+  const detalle = document.getElementById('pDetalle').value.trim() || 'Sin detalle';
+  const envio = document.getElementById('pEnvio').value;
+  const msg = `🐺 *Angel's Design - Solicitud de Presupuesto*\n\n👤 *Nombre:* ${nombre}\n🛠️ *Servicio:* ${servicio}\n📦 *Cantidad:* ${cantidad}\n💬 *Detalle:* ${detalle}\n🚚 *Envío:* ${envio}\n\n¿Me pueden dar un presupuesto? ¡Gracias!`;
+  window.open('https://wa.me/5493513180068?text=' + encodeURIComponent(msg), '_blank');
+}
+
 window.addEventListener('scroll',()=>{
   document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20);
 });
